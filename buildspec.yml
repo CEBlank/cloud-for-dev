@@ -19,5 +19,6 @@ artifacts:
   files:
     - "**/*"
     - target/buildspec.yml
+  name: buildspec.yml
   discard-paths: no
   base-directory: build
