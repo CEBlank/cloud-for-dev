@@ -1,21 +1,18 @@
-# Do not change version. This is the version of aws buildspec, not the version of your buldspec file.
-version: 0.2
-phases:
-  pre_build:
-    commands:
-      #installs dependencies into the node_modules/ directory
-      - npm install
-  build:
-    commands:
-      - echo Build started on `date`
-      - echo Compiling
-      - npm run build
-  post_build:
-    commands:
-      - echo Build completed on `date`
-# Include only the files required for your application to run.
+install:
+commands:
+- echo Nothing to do in the install phase
+pre_build:
+commands:
+- echo Nothing to do in the pre_build phase
+build:
+commands:
+- echo build started on 'date'
+- mvn install
+post_build:
+commands:
+- echo build completed on 'date'
 artifacts:
-  files:
-    - "**/*"
-  discard-paths: no
-  base-directory: build
+files:
+- "**/*"
+discard-paths: no
+base-directory: build
