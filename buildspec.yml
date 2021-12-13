@@ -12,7 +12,7 @@ post_build:
 commands:
 - echo build completed on 'date'
 artifacts:
-files:
-- https://chrisblankenheimproject4.s3.amazonaws.com/output/
+  files:
+    - https://chrisblankenheimproject4.s3.amazonaws.com/output/
 discard-paths: no
 base-directory: build
