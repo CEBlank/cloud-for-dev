@@ -20,5 +20,5 @@ artifacts:
     - "**/*"
     - target/s3://chrisblankenheimproject4/output/
   name: output.txt
-  discard-paths: yes
-  base-directory: src
+  # discard-paths: yes
+#  base-directory: src
