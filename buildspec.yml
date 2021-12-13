@@ -1,11 +1,11 @@
 version: 0.2
 phases:
     install:
-        commands:
-           - echo Nothing to do in the install phase
+        runtime-versions:
+            java: corretto11
     pre_build:
         commands:
-             - echo Nothing to do in the pre_build phase
+        - echo Nothing to do in the pre_build phase
     build:
         commands:
             - echo build started on 'date'
@@ -13,9 +13,5 @@ phases:
     post_build:
         commands:
             - echo build completed on 'date'
-artifacts:
-    files:
-        - https://chrisblankenheimproject4.s3.amazonaws.com/output/
-    discard-paths: no
-    base-directory: build
-
+    artifacts:
+        - target/messageUtil-1.0.jar
